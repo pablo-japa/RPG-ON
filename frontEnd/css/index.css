@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.almendra-sc-regular {
+    font-family: "Almendra SC", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+body{
+    border-top: 5px black solid;
+    border-bottom: 5px black solid;
+    background-image: url('/src/img/background.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.title-header{
+    color: white;
+    font-family: "Almendra SC", serif;
+    font-size: 60px;
+}
+.txt-Header{
+    color: white;
+    font-family: "Almendra SC", serif;
+    font-size: 30px;
+}
+
+.formalarioLogin{
+    margin-top: 10%;
+}
+
+.formularioContainer{
+    background-color: #1C1C1C;
+    border: rgb(95, 17, 17) 3px solid;
+    border-radius: 20px;
+}
+.title-header-form{
+    font-size: 40px;
+    margin-top: -10px;
+    font-family: "Almendra SC", serif;
+    color: white;
+    text-align: center;
+}
+
+.forms input{
+    border-radius: 15px;
+    background-color: #f3f0f0;
+    text-align: center;
+    height: 35px;
+    width: 250px;
+}
+
+.forms label{
+    font-family: "Almendra SC", serif;
+    text-align: center;
+    color: white;
+    font-size: 20px
+    
+}
+
+.btnIniciar{
+    font-family: "Almendra SC", serif;
+    align-self: center;
+    width: 80px;
+    background-color: rgb(116, 33, 33);
+}
+
+.formDiv{
+    width: 400px;
+    height: 450px;
+    
+}
+.anchor-contato{
+    margin-left: 400px !important; 
+    transition: transform 1s ease;
+    display: flex;
+} 
+.anchor-contato:hover{
+    color: rgb(44, 10, 10);
+    transform: scale(1.2);
+}
+
+.anchor-sobre{
+    margin-left: -100px !important; 
+    transition: transform 1s ease;
+    display: flex;
+}
+
+.anchor-sobre:hover{
+    color: rgb(44, 10, 10);
+    transform: scale(1.2);
+}
+
+.anchor-title{
+    transition: transform 1s ease;
+    display: flex;
+}
+.anchor-title:hover{
+    color: rgb(44, 10, 10);
+    transform: scale(1.1);
+}
+.redTrigger{
+    border: 1px solid red;
+}
