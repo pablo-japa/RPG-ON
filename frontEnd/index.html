@@ -16,25 +16,48 @@
 </head>
 
 <body>
-    <header class="d-flex flex-row d-flex align-items-baseline justify-content-around mt-3 ">
-        <div class="col-md-6 title-header"><span class="anchor-title">A lenda do Heroí</span></div>
-        <div class="col-md-0 txt-Header"><span class="anchor-contato">Contato</span></div>
-        <div class="col-md-0 txt-Header"><span class="anchor-sobre"> Sobre </span></div>
+    <header class="bg-dark">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-1 p-0 text-center divIcon">
+                <img src="src/img/dados.png" class="imgIcon" alt="">
+            </div>
+            <div class="col-md-9 p-0">
+                <h1 class="text-danger m-0 p-2 fontApplied ">RPG Nexus</h1>
+            </div>
+            <div class="col-md-1">
+                <p class="text-primary m-0 anchorType fontApplied">Sobre</p>
+            </div>
+            <div class="col-md-1">
+                <p class="text-primary m-0 anchorType fontApplied">Contato</p>
+            </div>
+        </div>
     </header>
 
-    <div class="formalarioLogin d-flex align-items-center justify-content-center">
-        <div class="formularioContainer d-flex align-self-center justify-content-center">
-            <div class="d-flex flex-column justify-content-center align-items-center formDiv">
-                <form id="formSubmit" class="d-flex flex-column forms align-items-center">
-                    <div class="title-header-form"><span>Login</span></div>
-                    <label class="mt-4 ">Nome</label>
-                    <input type="text" class="mt-1 nomeInput">
-                    <label class="mt-4">Senha</label>
-                    <input type="password" class="mt-1 senhaInput"> <i id="olhoAberto" class="fa fa-eye text-light mt-2"></i>
-                    <i id="olhoFechado" class="fas fa-eye-slash text-light mt-2 d-none"></i>
-                    <a href="##" id="cadastrarAnchor" class="mt-3">Cadastrar</a>
-                    <button type="button" class="btn btn-danger btnIniciar mt-4"><span>Iniciar</span></button>
-                </form>
+    <div class="d-flex justify-content-center align-items-center divBody">
+        <div class="row mb-5 test">
+            <div class="col-md-12 divLogin rounded bgColor">
+                <div class="d-flex justify-content-center">
+                    <img src="src/img/dados.png" class="imgIcon" alt="">
+                </div>
+                <div class="text-center loginText">
+                    <label class="fontApplied text-primary sizeTextNormal ">Login</label>
+                </div>
+                <div class="form-group">
+                    <label for="" class="d-flex justify-content-center mb-2 fontApplied text-light">Usuário</label>
+                    <input type="text" class="form-control text-center nomeInput mb-4 ">
+                    <label for="" class="d-flex justify-content-center mb-2 fontApplied text-light">Senha</label>
+                    <input type="password" class="form-control senhaInput text-center">
+                    <div class="text-center mt-2">
+                        <button class="btn-sm btn btn-dark" id="olhoFechado"><i class="fa fa-eye-slash"></i></button>
+                        <button class="btn-sm btn btn-dark d-none" id="olhoAberto"><i class="fa fa-eye"></i></button>
+                    </div>
+                </div>
+                <div class="form-group text-center mt-5">
+                    <button class="btn btn-md btn-primary" id="btnConfirmar">Confirmar</button>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="" class="text-center">Esqueceu a senha?</a>
+                </div>
             </div>
         </div>
     </div>

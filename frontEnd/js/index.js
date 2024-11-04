@@ -21,13 +21,11 @@ $(document).ready(function () {
         $('.senhaInput').attr('type', 'password')
     })
 
-    $('.btnIniciar').on('click', function () {
+    $('#btnConfirmar').on('click', function () {
         let nomeInputElement = $('.nomeInput')
         let senhaInputElement = $('.senhaInput')
-        let nomeInputValue = $('.nomeInput').val().toLowerCase()
-        let senhaInputValue = $('.senhaInput').val().toLowerCase()
-        console.log(nomeInputValue)
-        console.log(senhaInputValue)
+        let nomeInputValue = $('.nomeInput').val()
+        let senhaInputValue = $('.senhaInput').val()
 
         if (!nomeInputValue) {
             Swal.fire({
@@ -61,20 +59,21 @@ $(document).ready(function () {
 
         // DEPOIS DE TODAS AS VALIDAÇÕES, FAZ O FETCH
         $.ajax({
-            type: "POST",
+            type: "GET",
             //ORIGEM
             url: "http://localhost:8080/usuarios/todos",
-            dataType:"JSON",
-            data:{
+            data: {
                 usuario_nome: nomeInputValue,
                 usuario_senha: senhaInputValue
             },
             success: function (response) {
+                console.log(response);
                 console.log("Deu tudo certo")
-                window.location.href = "url pós login"
+                window.location.href = "/pages/telaInicio.html"
+
             },
             error: function (error) {
-
+                console.log(error, "erro caught")
             }
         })
     })
