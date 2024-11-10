@@ -14,7 +14,10 @@ function incluirHeader(header) {
 function todasInclusoes(header, menu, sidePrimaria, SideSegundaria) {
     //Incluir o header
     $.ajax({
-        url: "header.html"
+        url: "/frontEnd/includes/header.html",
+        success: function (response) {
+            $(`#${header}`).html(response)
+        }
     })
 }
 
