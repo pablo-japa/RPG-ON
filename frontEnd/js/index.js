@@ -1,5 +1,6 @@
 
 $(document).ready(function () {
+    incluirHeader("header")
 
     $('#cadastrarAnchor').on('click', function () {
         Swal.fire({
@@ -69,7 +70,7 @@ $(document).ready(function () {
             success: function (response) {
                 console.log(response);
                 console.log("Deu tudo certo")
-                window.location.href = "/pages/telaInicio.html"
+                window.location.href = "/pages/inicio/inicio.html"
 
             },
             error: function (error) {

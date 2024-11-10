@@ -1,0 +1,15 @@
+/* Esse é o arquivo css criado para definir os estilos de includes, e em geral  */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #2C2C2C;
+    height: 100vh
+        /*
+    Outras opções:
+    #3A3F44
+    #3A3F44
+    */
+}
