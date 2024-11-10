@@ -9,8 +9,6 @@ function incluirHeader(header) {
         }
     })
 }
-
-
 function todasInclusoes(header, menu, sidePrimaria, SideSegundaria) {
     //Incluir o header
     $.ajax({
@@ -20,8 +18,6 @@ function todasInclusoes(header, menu, sidePrimaria, SideSegundaria) {
         }
     })
 }
-
-
 function redirecCriarConta() {
     window.location.href = "pages/novaConta/novaConta.html"
 }
