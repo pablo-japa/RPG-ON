@@ -16,50 +16,65 @@
     <link href="https://fonts.googleapis.com/css2?family=Almendra+SC&family=MedievalSharp&display=swap"
         rel="stylesheet">
     <!-- Importacoes  -->
+    <link rel="icon" sizes="16x16" href="/frontEnd/src/favIcon/favicon-16x16.png" type="image/x-icon">
 
-    <title>A lenda do Herói</title>
+    <title>Login - RPG ON</title>
 </head>
 
 <body>
     <div id="header"></div>
+    <!-- senhaInput -->
+    <!-- emailInput -->
 
     <div class="d-flex justify-content-center align-items-center divBody">
-        <div class="row mb-5 test">
+        <div class="row mb-5 divLoginHeight">
             <div class="col-md-12 divLogin rounded bgColor">
                 <div class="d-flex justify-content-center">
-                    <img src="src/img/dados.png" class="imgIcon" alt="">
+                    <img src="/frontEnd/src/img/dados.png" class="imgIcon" alt="">
                 </div>
                 <div class="text-center loginText">
-                    <label class="fontApplied text-primary sizeTextNormal ">Login</label>
+                    <label class="fontApplied sizeTextNormal loginTitleColor ">Login</label>
                 </div>
-                <div class="form-group">
-                    <label for="" class="d-flex justify-content-center mb-2 fontApplied text-light">Usuário</label>
-                    <input type="text" class="form-control text-center nomeInput mb-4 ">
-                    <label for="" class="d-flex justify-content-center mb-2 fontApplied text-light">Senha</label>
-                    <input type="password" class="form-control senhaInput text-center">
-                    <div class="text-center mt-2">
-                        <button class="btn-sm btn btn-dark" id="olhoFechado"><i class="fa fa-eye-slash"></i></button>
-                        <button class="btn-sm btn btn-dark d-none" id="olhoAberto"><i class="fa fa-eye"></i></button>
+                <div class="col-md-12 mb-4">
+                    <label for="" class="label">Email</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control inputControl" id="emailInput" autocomplete="off">
                     </div>
                 </div>
-                <div class="form-group text-center mt-5">
-                    <button class="btn btn-md btn-primary" id="btnConfirmar">Confirmar</button>
+                <div class="col-md-12">
+                    <label for="" class="label">Senha</label>
+                    <div class="input-group">
+                        <input type="password" class="form-control inputControl" id="senhaInput" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button class="btn btn-md" id="btnConfirmar">Confirmar</button>
                 </div>
                 <div class="text-center mt-3">
-                    <a href="" class="text-center">Esqueceu a senha?</a>
+                    <a href="" class="text-center loginTitleColor">Esqueceu a senha?</a>
                 </div>
             </div>
         </div>
     </div>
 
+    <div id="loader" class="loader-hidden">
+        <div class="loader-text">
+            <h1 class="text-light textLoader"></h1>
+        </div>
+    </div>
+
     <!-- Importacoes  -->
+    <script type="module" src="/frontEnd/includes/fireBaseConfig.js" defer></script>
+
+    <script src="/frontEnd/modules/login/index.js" defer></script>
     <script src="/frontEnd/includes/funcoes.js" defer></script>
+    <script type="module" src="/frontEnd/modules/login/indexRequests.js" defer></script>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- Importacoes  -->
 
     <!-- importação unica  -->
-    <script src="index.js" defer></script>
 
 </body>
 

@@ -1,0 +1,281 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #151520;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ESTILIZAÇÃO DO HEADER */
+.imgIcon {
+    cursor: pointer;
+}
+
+#header {
+    background-color: #151520;
+    box-shadow: 0px 0.5px 0px 0px #35355a;
+}
+
+.divIcon {
+    width: 65px;
+    display: flex;
+    justify-content: center;
+    margin-left: 9px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.imgIcon {
+    height: 35px
+}
+
+.subtitleColor {
+    color:#7930e0;
+}
+.titleColor{
+    background: linear-gradient(90deg, #6A00FF, #B380FF, #6A00FF, #6A00FF);
+    background-size: 300% auto;
+    /* Amplia o gradiente */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientScroll 8s linear infinite;
+    /* Animação contínua */
+}
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+
+/* ESTILIZAÇÃO DO MENU */
+#menu {
+    padding-top: 1em;
+    height: 100%;
+    width: 6%;
+    background-color: #171724;
+    box-shadow: 0.2px 0px 0px 0px #1a1a24;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out, 0.5s;
+    z-index: 1000;
+}
+
+.btnMenu {
+    color: #8133ee;
+    background-color: #35355a;
+}
+
+.btnMenu:hover {
+    color: #e6e2ec;
+    background-color: #6A00FF;
+}
+.loginTitleColor{
+    color: #812ff3;
+}
+
+/* Adicione um deslocamento para o conteúdo principal */
+#content {
+    margin-left: 5%;
+    /* O mesmo valor de largura do menu */
+    transition: margin-left 0.5s ease-in-out;
+    /* Alinha com a animação do menu */
+}
+
+/* Estilos para os itens do menu */
+.listItem>a {
+    text-decoration: none;
+    /* Remove o sublinhado dos links */
+    color: white;
+    /* Define a cor do texto */
+}
+
+.listaItensMenu {
+    list-style-type: none;
+    /* Remove o estilo padrão da lista */
+    margin: 0;
+    /* Remove margens */
+    padding: 0;
+    /* Remove preenchimentos */
+}
+
+.listItem {
+    padding-top: 10px;
+    /* Espaçamento superior */
+    padding-bottom: 10px;
+    /* Espaçamento inferior */
+    text-align: center;
+    /* Centraliza os itens */
+}
+
+.itemListAnchor {
+    cursor: pointer;
+}
+
+.itemListAnchor>i {
+    color: #7930e0;
+}
+
+.hrDivide {
+    color: #35355a;
+}
+
+.listItem:hover {
+    background-color: #6A00FF;
+    cursor: pointer;
+    /* Cor de fundo ao passar o mouse */
+}
+
+.listItem:hover i {
+    color: #e6e2ec;
+    /* Cor do ícone ao passar o mouse */
+}
+
+.listItem:hover span {
+    color: #e6e2ec;
+    /* Cor do ícone ao passar o mouse */
+}
+
+#menu.openMenuSide {
+    width: 15%;
+    /* largura expandida */
+}
+
+.itemAlign {
+    display: flex;
+    padding-left: 15px;
+}
+
+.menuHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuTitle {
+    display: none;
+    background: linear-gradient(90deg, #6A00FF, #B380FF, #6A00FF, #6A00FF);
+    background-size: 300% auto;
+    /* Amplia o gradiente */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientScroll 8s linear infinite;
+    /* Animação contínua */
+}
+
+/* Animação para mover o gradiente */
+@keyframes gradientScroll {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.menuHeader .menuTitle {
+    margin-right: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    /* Ajuste a cor do texto conforme o tema */
+}
+
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+
+/* ESTILIZAÇÃO ITENS DO MENU */
+.nomeItemLista {
+    display: none;
+    color: #8337ee;
+}
+
+/* ESTILIZAÇÃO ITENS UNICOS */
+.anchorType {
+    cursor: pointer;
+    font-size: 19px;
+}
+
+.anchorType:hover {
+    text-decoration: underline
+}
+
+.fontApplied {
+    font-family: "Almendra SC", serif;
+}
+
+.sizeTextNormal {
+    font-size: 50px;
+}
+
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+
+/* LOADER */
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #171724;
+    transition: opacity 0.75s, visibility 0.75s;
+    z-index: 1000;
+}
+
+.loader-text {
+    position: absolute;
+    bottom: 265px;
+}
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.textLoader{
+    color: #8b3df8;
+}
+
+#loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #6303e9;
+    border-radius: 50%;
+    animation: loading 1.25s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}

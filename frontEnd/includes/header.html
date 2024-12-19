@@ -1,21 +1,22 @@
 <!-- Header -->
 
-<header class="bg-dark">
+<header id="header">
     <div class="row d-flex align-items-center">
-        <div class="col-md-1 p-0 text-center divIcon">
-            <img src="/frontEnd/src/img/dados.png" class="imgIcon" alt="">
+        <!-- Botão do menu com ícone -->
+        <button class="col-md-1 p-0 divIcon" id="menuToggle">
+            <img src="/frontEnd/src/img/dados.png" class="imgIcon" alt="Icone do Menu">
+        </button>
+
+        <!-- Título principal -->
+        <div class="col-md-7 p-0">
+            <h3 class="m-0 p-2 titleColor fontApplied">RPG ON</h3>
         </div>
-        <div class="col-md-8 p-0">
-            <h1 class="text-danger m-0 p-2 fontApplied ">RPG Nexus</h1>
-        </div>
-        <div class="col-md-1">
-            <p class="text-primary m-0 anchorType fontApplied">Sobre</p>
-        </div>
-        <div class="col-md-1">
-            <p class="text-primary m-0 anchorType fontApplied">Contato</p>
-        </div>
-        <div class="col-md-1">
-            <p class="text-primary m-0 anchorType fontApplied" onclick="redirecCriarConta()">Criar Conta</p>
-        </div>
+
+        <!-- Links de navegação -->
+        <nav class="col-md-4 d-flex justify-content-between">
+            <p class="subtitleColor m-0 anchorType fontApplied">sobre</p>
+            <p class="subtitleColor m-0 anchorType fontApplied">contato</p>
+            <p class="subtitleColor m-0 anchorType fontApplied" onclick="redirecCriarConta()">Criar Conta</p>
+        </nav>
     </div>
 </header>

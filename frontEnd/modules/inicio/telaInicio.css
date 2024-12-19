@@ -1,76 +1,74 @@
-* {
-    padding: 0;
-    margin: 0;
-    overflow: hidden
+.bordasPortlet {
+    border: 1px solid #35355a;
+    border-radius: 10px;
 }
 
-body{
-    background-color: #2C2C2C;
-    height: 100vh
-    /*
-    Outras opções:
-    #3A3F44
-    #3A3F44
-    */
+.box {
+    min-height: 200px;
+    padding: 30px;
+}
+.bordaCardImg{
+    border: 0.5px solid #35355a;
+    border-color: #35355a;
 }
 
-.almendra-sc-regular {
-    font-family: "Almendra SC", serif;
-    font-weight: 400;
-    font-style: normal;
+.card {
+    background-color: #151520;
+    border-color: #4e2c7e;
+    transition: transform 0.5s ease-in-out;
 }
 
-.fontApplied {
-    font-family: "Almendra SC", serif;
-}
-.sizeTextNormal{
-    font-size: 50px;
-}
-
-.bgColor{
-    background-color: #3A3F44;
-}
-.anchorType {
-    cursor: pointer;
-    font-size: 20px;
+.titleSessions {
+    background: linear-gradient(90deg, #6A00FF, #9554f7, #6A00FF, #6A00FF);
+    background-size: 300% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientScroll 8s linear infinite;
 }
 
-.anchorType:hover {
-    text-decoration: underline
+.card:hover {
+    transform: scale(1.1);
 }
 
-.divLogin{
-    padding: 80px 140px;
-    margin-bottom: 120px;
+.estiloCard {
+    height: 12%;
+    width: 12%;
 }
 
-.divBody{
-    height: 100vh;
+.imgBorder {
+    border-radius: 5px;
 }
 
-.imgIcon{
-    height:45px
+.btnAdicionar {
+    margin-left: auto;
+    background-color: #35355a;
 }
 
-.divIcon{
-    width: 80px;
-    margin-left: 50px;
+.btnAdicionar:hover{
+    background-color: #640ddd;
 }
-.loginText{
-    margin-bottom: 30px;
-}
-.test{
-    height: 600px;
-    width: 600px;
-}
- .nomeInput{
-    color: white;
-    background-color: #2C2C2C;
-    border-color: black;
-}
-.senhaInput{
-    color: white;
 
-    background-color: #2C2C2C;
-    border-color: black;
+.btnEditar{
+    background-color: #35355a;
+}
+
+.btnExcluir{
+    background-color: #35355a;
+}
+
+.icon{
+    color: #939096;
+}
+
+#insertCards {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os cards quebrem para a linha de baixo quando necessário */
+    gap: 25px;
+    /* Espaçamento entre os cards */
+    justify-content: flex-start;
+    /* Alinha os cards ao início do contêiner */
+    max-width: 100%;
+    /* Ocupa toda a largura possível do contêiner pai */
 }

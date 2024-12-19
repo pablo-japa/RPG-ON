@@ -4,73 +4,60 @@
     overflow: hidden
 }
 
-body{
-    background-color: #2C2C2C;
+body {
+    background-color: #151520;
     height: 100vh
-    /*
+        /*
     Outras opções:
     #3A3F44
     #3A3F44
     */
 }
 
-.almendra-sc-regular {
-    font-family: "Almendra SC", serif;
-    font-weight: 400;
-    font-style: normal;
+.bgColor {
+    background-color: #1E1E2C;
+}
+.label{
+    color: #812ff3;
 }
 
-.fontApplied {
-    font-family: "Almendra SC", serif;
+.inputControl{
+    background-color: #151520;
+    color: #dedee7;
+    border-color: #151520;
 }
-.sizeTextNormal{
-    font-size: 50px;
+.inputControl:focus{
+    background-color: #151520;
+    color: #dedee7;
+    border-color: #5c13c2;
 }
 
-.bgColor{
-    background-color: #3A3F44;
+#btnConfirmar{
+    background-color: #7320e7;
+    color: #dedee7;
 }
-.anchorType {
-    cursor: pointer;
-    font-size: 20px;
+#btnConfirmar:hover{
+    background-color: #3c0686;
+    color: #dcdce0;
 }
 
 .anchorType:hover {
     text-decoration: underline
 }
 
-.divLogin{
-    padding: 80px 140px;
-    margin-bottom: 120px;
+.divLogin {
+    padding: 40px 140px;
 }
 
-.divBody{
+.divBody {
     height: 100vh;
 }
 
-.imgIcon{
-    height:45px
-}
-
-.divIcon{
-    width: 80px;
-    margin-left: 50px;
-}
-.loginText{
+.loginText {
     margin-bottom: 30px;
 }
-.test{
-    height: 600px;
-    width: 600px;
-}
- .nomeInput{
-    color: white;
-    background-color: #2C2C2C;
-    border-color: black;
-}
-.senhaInput{
-    color: white;
 
-    background-color: #2C2C2C;
-    border-color: black;
+.divLoginHeight {
+    height: 550px;
+    width: 600px;
 }
