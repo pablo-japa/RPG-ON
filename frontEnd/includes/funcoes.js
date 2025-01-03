@@ -32,7 +32,10 @@ function todasInclusoes(header, menu, sidePrimaria, SideSegundaria) {
 }
 
 function redirecCriarConta() {
-    window.location.href = "pages/novaConta/novaConta.html"
+    loader(true, text = "Aguarde...")
+    setTimeout(() => {
+        window.location.href = "/frontEnd/modules/novaConta/novaConta.html";
+    }, 1000);
 }
 
 function loader(parameter, texto) {
@@ -46,6 +49,13 @@ function loader(parameter, texto) {
     }
 }
 
+function redirecLogin() {
+    loader(true, text = "Aguarde...")
+    setTimeout(() => {
+        window.location.href = "/frontEnd/modules/login/index.html";
+    }, 1000);
+}
+
 
 //Para fazer mostrar os itens da side nav Menu
 
@@ -56,6 +66,7 @@ $(document).on('click', '.btnMenu', function () {
     let textHidden = $(".nomeItemLista");
     let itemLista = $(".listItem");
     let menuTitle = $(".menuTitle");
+    let content = $("#content");
 
     if (menuStatus == false) {
         item.addClass("openMenuSide");
@@ -63,6 +74,7 @@ $(document).on('click', '.btnMenu', function () {
         textHidden.show("fast")
         menuTitle.show("fast")
         menuStatus = true
+        content.addClass("overlay")
         return;
     }
     if (menuStatus == true) {
@@ -70,7 +82,8 @@ $(document).on('click', '.btnMenu', function () {
         textHidden.hide("fast")
         itemLista.removeClass("itemAlign");
         menuTitle.hide("fast")
-        menuStatus = false
+        menuStatus = false;
+        content.removeClass("overlay")
         return;
     }
 

@@ -9,6 +9,24 @@ body {
     overflow: hidden;
 }
 
+/* ESTILIZAÇÃOI DO SWAl */
+.swal2-popup{
+    background-color: #1E1E2C;
+    
+}
+.swal2-title{
+    color: #812ff3;
+}
+.swal2-html-container{
+    color: #e6e2ec;
+}
+
+/* 
+ESTILIZAÇÃO CONTENT */
+.overlay {
+    opacity: 0.3;
+}
+
 /* ESTILIZAÇÃO DO HEADER */
 .imgIcon {
     cursor: pointer;
@@ -31,13 +49,14 @@ body {
 }
 
 .imgIcon {
-    height: 35px
+    height: 30px
 }
 
 .subtitleColor {
-    color:#7930e0;
+    color: #7930e0;
 }
-.titleColor{
+
+.titleColor {
     background: linear-gradient(90deg, #6A00FF, #B380FF, #6A00FF, #6A00FF);
     background-size: 300% auto;
     /* Amplia o gradiente */
@@ -78,7 +97,8 @@ body {
     color: #e6e2ec;
     background-color: #6A00FF;
 }
-.loginTitleColor{
+
+.loginTitleColor {
     color: #812ff3;
 }
 
@@ -190,6 +210,10 @@ body {
     /* Ajuste a cor do texto conforme o tema */
 }
 
+.iconMenu {
+    font-size: 14px;
+}
+
 
 /* --------------------------------------------------- */
 /* --------------------------------------------------- */
@@ -242,7 +266,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #171724;
-    transition: opacity 0.75s, visibility 0.75s;
+    transition: opacity 0.75s ease, visibility 0.75s ease;
     z-index: 1000;
 }
 
@@ -254,9 +278,10 @@ body {
 .loader-hidden {
     opacity: 0;
     visibility: hidden;
+
 }
 
-.textLoader{
+.textLoader {
     color: #8b3df8;
 }
 
@@ -278,4 +303,23 @@ body {
     to {
         transform: rotate(1turn);
     }
+}
+
+/* 
+INPUTS E LABELS */
+
+.label {
+    color: #812ff3;
+}
+
+.inputControl {
+    background-color: #151520;
+    color: #dedee7;
+    border-color: #151520;
+}
+
+.inputControl:focus {
+    background-color: #151520;
+    color: #dedee7;
+    border-color: #5c13c2;
 }

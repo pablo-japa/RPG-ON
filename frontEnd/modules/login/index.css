@@ -1,36 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    overflow: hidden
-}
-
-body {
-    background-color: #151520;
-    height: 100vh
-        /*
-    Outras opções:
-    #3A3F44
-    #3A3F44
-    */
-}
-
-.bgColor {
-    background-color: #1E1E2C;
-}
-.label{
-    color: #812ff3;
-}
-
-.inputControl{
-    background-color: #151520;
-    color: #dedee7;
-    border-color: #151520;
-}
-.inputControl:focus{
-    background-color: #151520;
-    color: #dedee7;
-    border-color: #5c13c2;
-}
 
 #btnConfirmar{
     background-color: #7320e7;
@@ -45,19 +12,29 @@ body {
     text-decoration: underline
 }
 
-.divLogin {
-    padding: 40px 140px;
-}
-
-.divBody {
-    height: 100vh;
-}
-
 .loginText {
     margin-bottom: 30px;
 }
 
 .divLoginHeight {
-    height: 550px;
-    width: 600px;
+    height: 500px;
+    width: 500px;
 }
+
+.novaConta {
+    display: flex;
+    justify-content: center;
+    background-color: #1E1E2C;
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.loginTitleColor{
+    font-size: 40px;
+}
+
+.eyeIcon{
+    color: #8c54db;
+}
+

@@ -52,40 +52,52 @@ async function verificarUsuarioTipo(user) {
 
 //email teste: regigigaspower2@gmail.com
 
+async function login() {
+    let text = "Aguarde"
+    loader(true, text)
+
+    let emailInput = $('#emailInput').val().trim();
+    let senhaInput = $('#senhaInput').val().trim();
+
+    // Verifica se os campos estão preenchidos
+    if (verificarCampos(emailInput, senhaInput) == false) {
+        return;
+    };
+
+    try {
+        // Tentativa de login com Firebase Authentication
+        const userCredential = await signInWithEmailAndPassword(auth, emailInput, senhaInput)
+        // Se o login for bem-sucedido, realiza a ação desejada
+        if (userCredential.user) {
+            verificarUsuarioTipo(userCredential.user);
+            window.location.href = "/frontEnd/modules/inicio/inicio.html";
+            setTimeout(() => {
+                loader(false)
+            }, 1500);
+        }
+
+    } catch (error) {
+        // Exibe um erro caso o login falhe
+        Swal.fire({
+            title: 'Email ou senha incorretos',
+            icon: 'error',
+        });
+        loader(false, text)
+
+    }
+}
+
 $(document).ready(function () {
 
-    $('#btnConfirmar').on('click', async function (event) {
-        let text = "Aguarde"
-        loader(true, text)
+    $('#btnConfirmar').on('click', function (e) {
+        e.preventDefault();
+        login()
+    });
 
-        let emailInput = $('#emailInput').val().trim();
-        let senhaInput = $('#senhaInput').val().trim();
-
-        // Verifica se os campos estão preenchidos
-        if (verificarCampos(emailInput, senhaInput) == false) {
-            return;
-        };
-
-        try {
-            // Tentativa de login com Firebase Authentication
-            const userCredential = await signInWithEmailAndPassword(auth, emailInput, senhaInput)
-            // Se o login for bem-sucedido, realiza a ação desejada
-            if (userCredential.user) {
-                verificarUsuarioTipo(userCredential.user);
-                window.location.href = "/frontEnd/modules/inicio/inicio.html";
-                setTimeout(() => {
-                    loader(false)
-                }, 1500);
-            }
-
-        } catch (error) {
-            // Exibe um erro caso o login falhe
-            Swal.fire({
-                title: 'Usuário não existente',
-                icon: 'error',
-            });
-            loader(false, text)
-
+    $(document).on('keydown', "#btnConfirmar",  function (e) {
+        if (e.key === "Enter") {
+            e.preventDefault(); // Evita submissão do formulário ou outros comportamentos padrão
+             login();
         }
     });
 });
