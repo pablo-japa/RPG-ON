@@ -1,6 +1,14 @@
 .bordasPortlet {
     border: 1px solid #35355a;
     border-radius: 10px;
+    margin: 0px 50px 0px 50px;
+}
+.addDiv{
+    margin: 10px 50px 10px 5px;
+}
+
+#content{
+    overflow-y: auto;
 }
 
 .box {
@@ -18,13 +26,23 @@
     transition: transform 0.5s ease-in-out;
 }
 
-.titleSessions {
+.mySessions {
     background: linear-gradient(90deg, #6A00FF, #9554f7, #6A00FF, #6A00FF);
     background-size: 300% auto;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: gradientScroll 8s linear infinite;
+    margin: 50px 50px 5px 50px;
+}
+.otherSessions{
+    background: linear-gradient(90deg, #6A00FF, #9554f7, #6A00FF, #6A00FF);
+    background-size: 300% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientScroll 8s linear infinite;
+    margin: 10px 50px 15px 50px;  
 }
 
 .card:hover {
@@ -37,7 +55,11 @@
 }
 
 .imgBorder {
+    height: 80px;
     border-radius: 5px;
+}
+.imgBorder:hover {
+   cursor:zoom-in
 }
 
 .btnAdicionar {
@@ -61,7 +83,7 @@
     color: #939096;
 }
 
-#insertCards {
+#mySessions {
     display: flex;
     flex-wrap: wrap;
     /* Permite que os cards quebrem para a linha de baixo quando necessário */
@@ -71,4 +93,24 @@
     /* Alinha os cards ao início do contêiner */
     max-width: 100%;
     /* Ocupa toda a largura possível do contêiner pai */
+}
+#otherSessions{
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os cards quebrem para a linha de baixo quando necessário */
+    gap: 25px;
+    /* Espaçamento entre os cards */
+    justify-content: flex-start;
+    /* Alinha os cards ao início do contêiner */
+    max-width: 100%;
+    /* Ocupa toda a largura possível do contêiner pai */
+}
+
+.emptySessions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divEmpty{
+    display: none;
 }

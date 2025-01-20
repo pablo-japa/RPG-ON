@@ -8,24 +8,41 @@
         </button>
     </div>
     <hr class="mb-0 hrDivide">
-    <ul class="listaItensMenu ">
+    <ul class="listaItensMenu">
+        <li class="listSeparator">Geral</li>
         <li class="listItem ">
-            <a href="/frontEnd/modules/inicio/inicio.html" class="itemListAnchor"><i class=" iconMenu fa fa-home"></i> <span
-                    class="nomeItemLista">
+            <a href="/frontEnd/modules/inicio/inicio.html" class="itemListAnchor"><i class=" iconMenu fa fa-home"></i>
+                <span class="nomeItemLista">
                     Home
                 </span></a>
         </li>
+        <li class="listItem ">
+            <a href="/frontEnd/modules/newRpg/newRpg.html" class="itemListAnchor"><i class=" iconMenu fa fa-plus"></i>
+                <span class="nomeItemLista">
+                    Novo RPG
+                </span></a>
+        </li>
+        <li class="listSeparator">Configurações</li>
         <li class="listItem">
             <a class="itemListAnchor"><i class=" iconMenu fa fa-cog"></i> <span class="nomeItemLista">
                     Configurações </span></a>
         </li>
         <li class="listItem">
-            <a class="itemListAnchor" id="btnLogOut"><i class=" iconMenu fa fa-sign-out"></i> <span class="nomeItemLista">
-                    Sair
-                </span></a>
+            <a class="itemListAnchor" id="btnLogOut"><i class=" iconMenu fa fa-sign-out"></i> <span
+                    class="nomeItemLista">
+                    Sair</span></a>
         </li>
     </ul>
 </aside>
 
 
 <script type="module" src="/frontEnd/includes/fireBaseMethods.js" defer></script>
+<script type="module">
+    import { logOut } from "/frontEnd/includes/fireBaseMethods.js"
+    $(document).ready(function () {
+        $("#btnLogOut").on('click', function () {
+            console.log("teste")
+            logOut()
+        })
+    })
+</script>

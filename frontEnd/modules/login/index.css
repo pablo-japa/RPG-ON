@@ -1,4 +1,6 @@
-
+body{
+    overflow:hidden
+}
 #btnConfirmar{
     background-color: #7320e7;
     color: #dedee7;

@@ -6,18 +6,19 @@
 body {
     background-color: #151520;
     height: 100vh;
-    overflow: hidden;
 }
 
 /* ESTILIZAÇÃOI DO SWAl */
-.swal2-popup{
+.swal2-popup {
     background-color: #1E1E2C;
-    
+
 }
-.swal2-title{
+
+.swal2-title {
     color: #812ff3;
 }
-.swal2-html-container{
+
+.swal2-html-container {
     color: #e6e2ec;
 }
 
@@ -134,6 +135,15 @@ ESTILIZAÇÃO CONTENT */
     /* Espaçamento inferior */
     text-align: center;
     /* Centraliza os itens */
+}
+
+.listSeparator {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: start;
+    margin-left: 10px;
+    color: #767477;
+    display: none;
 }
 
 .itemListAnchor {
@@ -322,4 +332,37 @@ INPUTS E LABELS */
     background-color: #151520;
     color: #dedee7;
     border-color: #5c13c2;
+}
+
+
+
+/* SCROLLLBRAR STYLES */
+
+::-webkit-scrollbar-track {
+    background-color: #151520;
+}
+
+::-webkit-scrollbar {
+    width: 9px;
+    background: #5c13c2;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #35355a;
+}
+
+
+/* TITULOS */
+.simpleTitle{
+    color: #7930e0;
+}
+
+.gradientTitle{
+    background: linear-gradient(90deg, #6A00FF, #B380FF, #6A00FF, #6A00FF);
+    background-size: 300% auto;
+    /* Amplia o gradiente */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientScroll 8s linear infinite;
 }

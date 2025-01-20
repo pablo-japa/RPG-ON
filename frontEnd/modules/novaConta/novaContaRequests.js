@@ -52,7 +52,6 @@ async function authenticateCredentials(email, password) {
 
 async function criarCredenciais(email) {
     const userName = $("#nameUser").val();
-    console.log(userName, email);
     try {
         // Adiciona um novo documento com um ID único
         await addDoc(collection(db, "usuarios"), {
@@ -133,7 +132,6 @@ function verificarCamposCriacao(email, senha, senhaConfi) {
 }
 
 $(document).ready(function () {
-    verificaUsuarioLogado()
     $("#btnConfirmar").click(function (e) {
         e.stopPropagation();
         let email = $("#email").val().trim();

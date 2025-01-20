@@ -67,8 +67,10 @@ $(document).on('click', '.btnMenu', function () {
     let itemLista = $(".listItem");
     let menuTitle = $(".menuTitle");
     let content = $("#content");
+    let listSeparator = $(".listSeparator");
 
     if (menuStatus == false) {
+        listSeparator.show("fast");
         item.addClass("openMenuSide");
         itemLista.addClass("itemAlign")
         textHidden.show("fast")
@@ -78,6 +80,7 @@ $(document).on('click', '.btnMenu', function () {
         return;
     }
     if (menuStatus == true) {
+        listSeparator.hide("fast");
         item.removeClass("openMenuSide");
         textHidden.hide("fast")
         itemLista.removeClass("itemAlign");

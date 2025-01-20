@@ -6,6 +6,9 @@
     height: auto;
     border-radius: 20px;
 }
+body{
+    overflow:hidden
+}
 
 .loginTitleColor{
     font-size: 35px;

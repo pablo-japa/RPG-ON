@@ -18,10 +18,10 @@
 
     <!-- Arquivos CSS Locais -->
     <link rel="stylesheet" href="/frontEnd/includes/global.css">
-    <link rel="stylesheet" href="/frontend/modules/inicio/telaInicio.css">
+    <link rel="stylesheet" href="/frontend/modules/newRpg/newRpg.css">
     <link rel="icon" sizes="16x16" href="/frontEnd/src/favIcon/favicon-16x16.png" type="image/x-icon">
 
-    <title>Inicio - RPG ON</title>
+    <title>Novo - RPG ON</title>
 </head>
 
 <body>
@@ -29,33 +29,15 @@
 
     <div id="content">
         <div class="portlet">
+            <div class="portlet-title">
+                <h2 class="gradientTitle">Novo RPG</h2>
+            </div>
             <div class="portlet-body">
-                <div class="portlet-title d-flex mySessions">
-                    <h3 class="tituloSession">Minhas Sessões
-                    </h3>
-                </div>
-                <div class="portlet light  bordasPortlet box">
-                    <div id="mySessions">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="label">Nome</label>
+                        <input type="text" class="form-control inputControl">
                     </div>
-                </div>
-                <div class="portlet-footer d-flex addDiv">
-                    <button class="btn rounded-circle btnAdicionar"><i class="fa fa-plus icon"></i></button>
-                </div>
-                <div class="portlet-title d-flex otherSessions">
-                    <h3 class="tituloSession">Participando
-                    </h3>
-                </div>
-                <div class="portlet light  bordasPortlet box">
-                    <div id="otherSessions">
-                    </div>
-                    <div class="divEmpty">
-                        <div class="emptySessions">
-                            <h3>Nenhuma Sessão ativa</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="portlet-footer d-flex addDiv">
-                    <button class="btn rounded-circle btnAdicionar"><i class="fa fa-plus icon"></i></button>
                 </div>
             </div>
         </div>
@@ -70,10 +52,10 @@
     <!-- Scripts Locais -->
 
     <script src="/frontEnd/includes/funcoes.js" defer></script>
-    <script src="/frontEnd/modules/inicio/inicio.js" defer></script>
+    <script src="/frontEnd/modules/newRpg/newRpg.js" defer></script>
     <script type="module" src="/frontEnd/includes/fireBaseConfig.js" defer></script>
-    <script type="module" src="/frontEnd/includes/fireBaseMethods.js"></script>
-    <script type="module" src="/frontEnd/modules/inicio/inicioRequests.js" defer></script>
+    <script type="module" src="/frontEnd/includes/fireBaseMethods.js" defer></script>
+    <script type="module" src="/frontEnd/modules/newRpg/newRpgRequests.js" defer></script>
 
     <!-- jQuery (se necessário) -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
